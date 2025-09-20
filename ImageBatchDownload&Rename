@@ -26,7 +26,7 @@ for url in links:
     try:
         ext = ".jpg"  # 指定图片后缀。也可以尝试从响应头或 URL 推断原始扩展名
         # 若要保留原图片原本扩展名，可以尝试从响应头 Content-Type 推断
-        path = os.path.join(download_dir, f"{counter:04d}{ext}")
+        path = os.path.join(download_dir, f"{counter:04d}{ext}") #文件名按顺序用4位自然数重命名
         download_image(url, path)
         print(f"[{counter:04d}] downloaded: {path}")
         counter += 1
